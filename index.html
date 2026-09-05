@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="weather-app">
+
+        <div class="app-header">
+            <h1>🌤️ Weather App</h1>
+            <p>Check the current weather of any city</p>
+        </div>
+
+        <form id="weatherForm" class="search-box">
+            <input 
+                type="text" 
+                id="cityInput" 
+                placeholder="Enter city name..."
+                autocomplete="off"
+            >
+            <button type="submit">Search</button>
+        </form>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Fetching weather...</p>
+        </div>
+
+        <div id="errorMessage" class="error hidden"></div>
+
+        <div id="weatherCard" class="weather-card hidden">
+
+            <div class="location">
+                <h2 id="cityName">City</h2>
+                <p id="countryName">Country</p>
+            </div>
+
+            <div class="weather-main">
+                <div id="weatherIcon" class="weather-icon">☀️</div>
+
+                <div>
+                    <div class="temperature">
+                        <span id="temperature">--</span>°C
+                    </div>
+                    <p id="weatherDescription">Clear Sky</p>
+                </div>
+            </div>
+
+            <div class="weather-details">
+
+                <div class="detail">
+                    <span>💧</span>
+                    <div>
+                        <p>Humidity</p>
+                        <strong id="humidity">--%</strong>
+                    </div>
+                </div>
+
+                <div class="detail">
+                    <span>💨</span>
+                    <div>
+                        <p>Wind Speed</p>
+                        <strong id="windSpeed">-- km/h</strong>
+                    </div>
+                </div>
+
+                <div class="detail">
+                    <span>🌡️</span>
+                    <div>
+                        <p>Feels Like</p>
+                        <strong id="feelsLike">--°C</strong>
+                    </div>
+                </div>
+
+                <div class="detail">
+                    <span>☁️</span>
+                    <div>
+                        <p>Weather</p>
+                        <strong id="weatherType">--</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <p class="footer">Powered by Open-Meteo API</p>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
